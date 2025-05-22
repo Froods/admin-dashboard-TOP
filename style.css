@@ -1,3 +1,100 @@
-h1 {
-    color: green;
+@font-face {
+    font-family: 'robotoregular';
+    src: url('fonts/roboto-variablefont_wdthwght-webfont.woff2') format('woff2'),
+         url('fonts/roboto-variablefont_wdthwght-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    font-size: 14px;
+    font-family: 'robotoregular', Arial, Helvetica, sans-serif;
+}
+
+html, body {
+  height: 100%;
+}
+
+button {
+    background: none;
+}
+
+.clickable:hover {
+    cursor: pointer;
+}
+
+.page {
+    height: 100%;
+    display: grid;
+    grid-template: 22% repeat(3, 26%) / 1fr 4fr;
+}
+
+.header {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    background-color: ghostwhite;
+    display: grid;
+    grid-template: 1fr 1fr / 3fr 1fr;
+    padding: 4px 48px;
+}
+
+.header-element {
+    margin: 12px;
+}
+
+.search {
+    grid-column: 1;
+    grid-row: 1;
+    display: flex;
+    align-items: center;
+}
+
+#search {
+    height: 32px;
+    width:fit-content;
+    margin-left: 8px;
+    flex: 1;
+    border-radius: 32px;
+    padding-left: 12px;
+    background-color: #f0f0f6;
+}
+
+.profile {
+    grid-column: 2;
+    grid-row: 1;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 24px;
+}
+
+.profile h4 {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.welcome {
+    grid-column: 1;
+    grid-row: 2;
+    display: flex;
+}
+
+.action-buttons {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.sidebar {
+    grid-column: 1 / 2;
+    grid-row: 1 / 5;
+    background-color: rgb(0, 113, 218);
+}
+
+.main-content {
+    grid-column: 2 / 3;
+    grid-row: 2 / 5;
+    background-color: #f0f0f6;
 }
