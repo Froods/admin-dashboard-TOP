@@ -6,6 +6,14 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'robotobold';
+    src: url('fonts/roboto-bold-webfont.woff2') format('woff2'),
+         url('fonts/roboto-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -29,7 +37,7 @@ button {
 .page {
     height: 100%;
     display: grid;
-    grid-template: 22% repeat(3, 26%) / 1fr 4fr;
+    grid-template: 25% repeat(3, 25%) / 1fr 4fr;
 }
 
 .header {
@@ -62,6 +70,13 @@ button {
     background-color: #f0f0f6;
 }
 
+#search:hover,
+#search:focus,
+#search:active {
+    background-color: #e1e1e7;
+    outline: none;
+}
+
 .profile {
     grid-column: 2;
     grid-row: 1;
@@ -71,20 +86,60 @@ button {
     gap: 24px;
 }
 
-.profile h4 {
-    font-size: 18px;
-    font-weight: bold;
+.profile .profile-pic {
+    border: 2px rgb(0, 113, 218) solid;
+    border-radius: 100%;
+    padding: 1px;
+}
+
+.profile .profile-pic:hover {
+    filter: brightness(1.05);
 }
 
 .welcome {
     grid-column: 1;
     grid-row: 2;
     display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.welcome .profile-pic {
+    border: 2px rgb(0, 113, 218) solid;
+    border-radius: 100%;
+    padding: 2px;
+}
+
+.welcome-text {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 12px;
+}
+
+.welcome-text h4 {
+    font-size: 24px;
+    font-family: 'robotobold';
 }
 
 .action-buttons {
     grid-column: 2;
     grid-row: 2;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.action-buttons button {
+    background-color: rgb(0, 113, 218);
+    padding: 12px 32px;
+    border-radius: 32px;
+    color: ghostwhite;
+}
+
+.action-buttons button:hover {
+    background-color: rgb(2, 126, 243);
 }
 
 .sidebar {
